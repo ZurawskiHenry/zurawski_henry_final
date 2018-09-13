@@ -1,0 +1,361 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+$primaryCol: #99b;
+$displayHeader: 'Exo', sans-serif;
+$pFont: helvetica, sans-serif;
+
+ @mixin bodyCopy{
+   font-family: $pFont;
+   color: $primaryCol;
+   letter-spacing:2px;
+ }
+
+body{
+  background-color: black;
+}
+
+header h1{
+  margin: 5px 0px;
+}
+header {
+  font-family: $displayHeader;
+  font-size: 24pt;
+  font-weight: 900;
+  display: block;
+  color: white;
+}
+
+header p {
+  font-family: $pFont;
+  font-size: 12pt;
+  font-weight: normal;
+  color: $primaryCol;
+  margin: 0px;
+}
+
+p{
+  @include bodyCopy;
+}
+/*-------------------------------------
+| Carousel
+-------------------------------------*/
+.item img {
+  width: 1200px;
+}
+
+.item {
+  height: 500px;
+  overflow: hidden;
+}
+
+/*-------------------------------------
+| Modal Lightbox
+-------------------------------------*/
+
+.modalImg {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  max-width: 898px;
+  height: auto;
+  }
+
+.modal-desc {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/*-------------------------------------
+| About
+-------------------------------------*/
+  .about {
+    min-width: 320px;
+    max-width: 1050px;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+    display: flex;
+    margin: auto;
+  }
+
+  .row h2 {
+    font-family: $displayHeader;
+    color: white;
+    position: relative;
+    left: -36px;
+  }
+
+  .collapse-button {
+    text-align: center;
+    width: 25%;
+  }
+
+  .about_desc {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0px;
+    margin: 0px;
+    width: 33%;
+    color: black;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+  }
+  .about_display_body {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    z-index: 2;
+    writing-mode: vertical-lr;
+  }
+  .about img {
+    position: relative;
+    top: -125px;
+    width: 1050px  ;
+    height: 700px;
+  }
+
+
+/*-------------------------------------
+| Contact
+-------------------------------------*/
+.contact {
+  font-size: 0px;
+}
+.contact img {
+  display: inline;
+  max-width: 33%;
+  background-color: white;
+  min-width: 200px;
+}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+
+@media screen and (max-width:991px) {
+  .collapse-button {
+    text-align:  left;
+  }
+  .about_desc {
+    width: 50%
+  }
+  .about_display_body
+  {
+    color: black;
+  }
+  .about img {
+    left: -20px;
+  }
+  .row h2 {
+        left: 0px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .collapse-button {
+    text-align:  left;
+  }
+  .about_desc {
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    background-color: white;
+  }
+  .about {
+    height: 100%
+  }
+  .about img{
+    display: none;
+  }
+  .about_display_body
+  {
+    display: none
+  }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
